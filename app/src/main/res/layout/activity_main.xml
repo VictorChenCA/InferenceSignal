@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Display signal strength -->
+    <TextView
+        android:id="@+id/signalStrength"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Current Signal Strength: N/A"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:padding="16dp" />
+
+    <!-- Display inferred location -->
+    <TextView
+        android:id="@+id/inferredLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Inferred Location: N/A"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/signalStrength"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp" />
+
+    <!-- Labels for locations -->
+    <LinearLayout
+        android:id="@+id/locationsContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/inferredLocation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp">
+
+        <TextView
+            android:id="@+id/location1View"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location 1: N/A"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/location2View"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location 2: N/A"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/location3View"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location 3: N/A"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/location4View"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location 4: N/A"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <!-- Buttons for saving locations -->
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <Button
+            android:id="@+id/locReset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reset Locations"/>
+        <Button
+            android:id="@+id/buttonReset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reset Probabilities (To Uniform)"
+            android:layout_marginBottom="30sp"/>
+        <Button
+            android:id="@+id/buttonLocation1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Location 1" />
+
+        <Button
+            android:id="@+id/buttonLocation2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Location 2" />
+
+        <Button
+            android:id="@+id/buttonLocation3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Location 3" />
+
+        <Button
+            android:id="@+id/buttonLocation4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Location 4" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
